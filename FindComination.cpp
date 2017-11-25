@@ -5,6 +5,8 @@
 
 using namespace std;
 
+/* The function multiplies 2 matrices F and M of size 2*2, and
+  save the multiplication result back to F[][] */
 
 void multiply(long long int F[2][2], long long int M[2][2])
 {
@@ -19,6 +21,8 @@ void multiply(long long int F[2][2], long long int M[2][2])
   F[1][1] = w;
 }
 
+/* Thisfunction calculates F[][] raise to the power n and puts the
+  result in F[][].*/
 void power(long long int F[2][2], long long int n)
 {
   if( n == 0 || n == 1)
@@ -46,14 +50,16 @@ long long int modfib(long long int n)
   return (F[0][0]*3+F[0][1]*2)%mod_value;
 }
 
+
+// The main function from where progaramme will start.
 int main()
 {
 	long long int T;
-	cin >> T;
+	cin >> T;    //Input for number of test cases.
 	for(int k=0;k<T;k++)
 	{
 		long long int num;
-		cin >> num;
+		cin >> num;                //Input bit for which we have to find the possible combination
 		cout << modfib(num) << endl;
 	}
 	return 0;
